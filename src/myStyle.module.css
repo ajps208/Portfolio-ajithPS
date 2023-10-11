@@ -1,0 +1,17 @@
+.dark-theme {
+    --main-heading: #5f99be;
+    --para-clr: #fff;
+    --btn-clr: #5f99be;
+    --btn-text: #fff;
+    --bg-clr: #111b20;
+  }
+  /* :root{
+    --main-heading: #5f99be;
+  } */
+  
+
+  
+  /* Apply the class to the Navbar */
+  .navbar {
+    background-color:var(--main-heading);
+  }

@@ -1,0 +1,52 @@
+
+.navp::after{
+    content:'';
+    height: 2px;
+    width: 0;
+    background: teal;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: .5s ease-in-out;
+}
+.navp:hover::after{
+    
+    width: 100%;
+}
+.nav{
+    background-color: white;
+    color: black;
+}
+.navp{
+    font-family: cursive;
+    color: white;
+    font-size: 18px;
+    position: relative;
+  
+}
+.navpdark{
+    font-family: cursive;
+    color: black;
+    font-size: 18px;
+    position: relative;
+  
+}
+
+.navpdark::after{
+    content:'';
+    height: 2px;
+    width: 0;
+    background: teal;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: .5s ease-in-out;
+}
+.navpdark:hover::after{
+    
+    width: 100%;
+}
+.navdark{
+    background-color: black;
+    color: white;
+}
