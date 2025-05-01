@@ -14,20 +14,26 @@ import tictactoe from "../images/tictactoe.png";
 import travelista from "../images/travelista.png";
 import weather from "../images/weather.png";
 import zomato from "../images/zomato.png";
-import ajith from "../images/ajithPS-1.png"
-import png2 from "../images/png2.png"
-import round from "../images/round.png"
+import ajith from "../images/ajithPS-1.png";
+import png2 from "../images/png2.png";
+import round from "../images/round.png";
+import portfolio from "../images/portfolio.png";
+import ticktmate from "../images/ticktmate.png";
+import mugprint from "../images/mugprint.png";
+import notesin from "../images/notesin.png";
 
-
-function Body({isDarkMode}) {
+function Body({ isDarkMode }) {
   console.log(isDarkMode);
- 
 
   return (
     <>
       <Container fluid id="home">
         <Row>
-          <Col sm={8} lg={7 } className="d-flex flex-column justify-content-center align-items-center pt-5">
+          <Col
+            sm={8}
+            lg={7}
+            className="d-flex flex-column justify-content-center align-items-center pt-5"
+          >
             <div className="titlediv">
               <p className="titlepara">Hey There,</p>
               <h1 className="titlehead">
@@ -44,11 +50,7 @@ function Body({isDarkMode}) {
               </p>
             </div>
             <div className="abt mt-3 ml-5">
-              <img
-                className="img-fluid w-25"
-                src={round}
-                alt=""
-              />
+              <img className="img-fluid w-25" src={round} alt="" />
               <span className="abttxt">
                 About me{" "}
                 <i
@@ -59,13 +61,12 @@ function Body({isDarkMode}) {
             </div>
             <button className="b mt-4 ">Hire Me</button>
           </Col>
-          <Col sm={4} lg={5 }>
-          <div className="img-group">
-            <img className="img-fluid png2" src={png2} alt="" />
-          <img className="ajith img-fluid  " src={ajith} alt="" />
-          {/* <img className="png img-fluid rounded" src={png} alt="" /> */}
-          </div>
-         
+          <Col sm={4} lg={5}>
+            <div className="img-group">
+              <img className="img-fluid png2" src={png2} alt="" />
+              <img className="ajith img-fluid  " src={ajith} alt="" />
+              {/* <img className="png img-fluid rounded" src={png} alt="" /> */}
+            </div>
           </Col>
         </Row>
       </Container>
@@ -109,9 +110,108 @@ function Body({isDarkMode}) {
           </Col>
         </Row>
       </Container>
+      {/* Experience Section */}
+      <Container fluid id="experience" className="my-5">
+        <div className="pl-5 pt-5">
+          <h2 className="titlehead">Experience</h2>
+          <hr style={{ width: "170px", height: "2px" }} />
+
+          <Row className="mt-4">
+            <Col lg={6} className="mb-4">
+              <div className="experience-card p-4 shadow-sm rounded">
+                <div className="d-flex justify-content-between align-items-center mb-3">
+                  <h3 className="fw-bold m-0">Software Developer</h3>
+                  <span className="badge bg-primary">Current</span>
+                </div>
+                <h5 className="text-secondary">
+                  Unplugapps [INNOVATIONS IT OMAN]
+                </h5>
+                <h6>03/2024 - Present | Irinjalakuda, Kerala</h6>
+                <ul className="mt-3">
+                  <li>
+                    Proficiently troubleshoot and maintain software programs
+                    daily, ensuring optimal performance.
+                  </li>
+                  <li>
+                    Developed interactive React interfaces with Material-UI for
+                    consistency and aesthetics.
+                  </li>
+                  <li>
+                    Engineer Node.js server-side applications, managing routing,
+                    authentication, and database integration.
+                  </li>
+                  <li>
+                    Utilize SQL for efficient database design and management.
+                  </li>
+                  <li>
+                    Created RESTful APIs for seamless front-end to back-end
+                    communication.
+                  </li>
+                  <li>
+                    Assisted team lead with development and prototype designs.
+                  </li>
+                  <li>
+                    Conducted thorough unit testing and debugging to ensure
+                    error-free functionality.
+                  </li>
+                  <li>
+                    Expertly utilize Git for collaborative version control.
+                  </li>
+                </ul>
+              </div>
+            </Col>
+
+            <Col lg={6} className="mb-4">
+              <div className="experience-card p-4 shadow-sm rounded">
+                <div className="d-flex justify-content-between align-items-center mb-3">
+                  <h3 className="fw-bold m-0">Developer Intern</h3>
+                  <span className="badge bg-secondary">Completed</span>
+                </div>
+                <h5 className="text-secondary">Luminar Technolab</h5>
+                <h6>06/2023 - 01/2024 | Kochi</h6>
+
+                <div className="mt-3">
+                  <h6 className="fw-bold">
+                    BACK-END: Node.js, Express.js, MongoDB, REST API
+                  </h6>
+                  <ul>
+                    <li>
+                      Engineered robust backend infrastructure, cutting server
+                      response time by 50%.
+                    </li>
+                    <li>
+                      Enhanced data retrieval in databases by 10% using Node.js,
+                      Express.js, and MongoDB.
+                    </li>
+                  </ul>
+
+                  <h6 className="fw-bold mt-3">
+                    FRONT-END: HTML/CSS, Bootstrap, React, Angular, JavaScript
+                  </h6>
+                  <ul>
+                    <li>
+                      Boosted application performance by 35% through frontend
+                      optimization.
+                    </li>
+                    <li>
+                      Achieved 30% app optimization and decreased backend
+                      response time.
+                    </li>
+                    <li>
+                      Implemented version control using Git, ensuring seamless
+                      collaboration within the development team.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </div>
+      </Container>
+
       <Container
         fluid
-        className=" d-flex flex-column justify-content-center  pt-5" 
+        className=" d-flex flex-column justify-content-center  pt-5"
       >
         <div className="pl-5">
           <h2 className="titlehead">Skills</h2>
@@ -167,7 +267,7 @@ function Body({isDarkMode}) {
                 <i class="devicon-cplusplus-plain colored"></i> C++
               </li>
               <li>
-                <i class="devicon-photoshop-plain colored"></i> Photoshop
+                <i class="devicon-materialui-plain colored"></i> Material UI
               </li>
               <li>
                 <i class="devicon-microsoftsqlserver-plain colored"></i> Office
@@ -176,10 +276,294 @@ function Body({isDarkMode}) {
           </div>
         </div>
       </Container>
-      <Container fluid id="projects"  >
+      {/* Education Section */}
+      <Container fluid id="education" className="my-5">
+        <div className="pl-5 pt-5">
+          <h2 className="titlehead">Education</h2>
+          <hr style={{ width: "170px", height: "2px" }} />
+
+          <Row className="mt-4">
+            <Col lg={4} className="mb-4">
+              <div className="education-card p-4 shadow-sm rounded">
+                <div className="d-flex justify-content-between align-items-center mb-3">
+                  <h3 className="fw-bold m-0">MCA</h3>
+                  <span className="badge bg-primary">Pursuing</span>
+                </div>
+                <h5 className="text-secondary">
+                  INDIRA GANDHI NATIONAL UNIVERSITY
+                </h5>
+                <h6>2025 - </h6>
+                <p className="mt-3">
+                  Currently pursuing Master of Computer Applications, enhancing
+                  advanced computing skills and knowledge.
+                </p>
+              </div>
+            </Col>
+
+            <Col lg={4} className="mb-4">
+              <div className="education-card p-4 shadow-sm rounded">
+                <div className="d-flex justify-content-between align-items-center mb-3">
+                  <h3 className="fw-bold m-0">BSc Computer Science</h3>
+                  <span className="badge bg-secondary">Completed</span>
+                </div>
+                <h5 className="text-secondary">
+                  Sri C Achuthamenon Govt College
+                </h5>
+                <h6>July 2020 - March 2023 | Thrissur</h6>
+                <p className="mt-3">
+                  Graduated with 80.05%, gaining comprehensive knowledge in
+                  computer science fundamentals and programming concepts.
+                </p>
+              </div>
+            </Col>
+
+            <Col lg={4} className="mb-4">
+              <div className="education-card p-4 shadow-sm rounded">
+                <div className="d-flex justify-content-between align-items-center mb-3">
+                  <h3 className="fw-bold m-0">Higher Secondary</h3>
+                  <span className="badge bg-secondary">Completed</span>
+                </div>
+                <h5 className="text-secondary">St. Antonys HSS Pudukad</h5>
+                <h6>June 2018 - March 2020 | Thrissur</h6>
+                <p className="mt-3">
+                  Completed with 90%, establishing a strong foundation for
+                  higher education in computer science.
+                </p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+      </Container>
+
+      {/* Certificates Section */}
+      <Container fluid id="certificates" className="my-5">
+        <div className="pl-5 pt-5">
+          <h2 className="titlehead">Certifications</h2>
+          <hr style={{ width: "200px", height: "2px" }} />
+
+          <Row className="mt-4">
+            <Col lg={6} className="mb-4">
+              <div className="certificate-card p-4 shadow-sm rounded">
+                <div className="certificate-icon mb-3">
+                  <i className="fa-solid fa-certificate fs-1 text-warning"></i>
+                </div>
+                <h3 className="fw-bold">BSc Computer Science</h3>
+                <h5 className="text-secondary">Calicut University</h5>
+                <p className="mt-3">
+                  Bachelor's degree in Computer Science, covering fundamental
+                  and advanced concepts in programming, algorithms, and computer
+                  systems.
+                </p>
+              </div>
+            </Col>
+
+            <Col lg={6} className="mb-4">
+              <div className="certificate-card p-4 shadow-sm rounded">
+                <div className="certificate-icon mb-3">
+                  <i className="fa-solid fa-award fs-1 text-primary"></i>
+                </div>
+                <h3 className="fw-bold">MERN Full Stack Development</h3>
+                <h5 className="text-secondary">NACTET</h5>
+                <p className="mt-3">
+                  Comprehensive certification in MERN (MongoDB, Express.js,
+                  React.js, Node.js) stack development, covering front-end and
+                  back-end technologies.
+                </p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+      </Container>
+
+      <Container fluid id="projects">
         <div className="pl-5 pt-5">
           <h2 className="titlehead">Projects</h2>
           <hr style={{ width: "170px", height: "2px" }} />
+          <Row>
+            <Col lg={3}>
+              {" "}
+              <Card
+                style={{
+                  width: "18rem",
+                  marginTop: "20px",
+                  position: "relative",
+                }}
+              >
+                <Card.Img
+                  className="cardimg1 img-fluid"
+                  variant="top"
+                  src={portfolio}
+                />
+                <div className="overlay">
+                  <h3 className="overlay-h">WEBSITE DESIGN</h3>
+                  <p className="overlay-p">Portfolio Website</p>
+
+                  <a
+                    className="overlay-a"
+                    href="https://github.com/ajps208/Ajith_Portfolio_FrontEnd"
+                  >
+                    {" "}
+                    <i class="devicon-github-original text-light  fs-2 "></i>
+                  </a>
+                  <a
+                    href="https://ajith-portfolio-new.vercel.app/"
+                    className="overlay-a"
+                  >
+                    <i class="fa-solid fa-link  text-light  fs-2 "></i>
+                  </a>
+                </div>
+
+                <Card.Body>
+                  <Card.Title>AjithGPT</Card.Title>
+                  <Card.Text className="fs-2">
+                    <i class="devicon-html5-plain colored"></i>
+
+                    <i class="devicon-css3-plain colored ml-2"></i>
+
+                    <i class="devicon-react-original colored ml-2"></i>
+
+                    <i class="devicon-javascript-plain colored ml-2"></i>
+
+                    <i class="devicon-materialui-plain colored ml-2"></i>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={3}>
+              <Card
+                style={{
+                  width: "18rem",
+                  marginTop: "20px",
+                  position: "relative",
+                }}
+              >
+                <Card.Img
+                  className="cardimg1 img-fluid"
+                  variant="top"
+                  src={ticktmate}
+                />
+                <div className="overlay">
+                  <h3 className="overlay-h">WEBSITE DESIGN</h3>
+                  <p className="overlay-p">Ticket Mangement System</p>
+
+                  <a
+                    className="overlay-a"
+                    href="https://github.com/ajps208/Ticket-Book"
+                  >
+                    {" "}
+                    <i class="devicon-github-original text-light  fs-2 "></i>
+                  </a>
+                  <a
+                    className="overlay-a"
+                    href="https://ticket-book-ajith.vercel.app/"
+                  >
+                    <i class="fa-solid fa-link  text-light  fs-2 "></i>
+                  </a>
+                </div>{" "}
+                <Card.Body>
+                  <Card.Title>Ticket Mate</Card.Title>
+                  <Card.Text className="fs-2">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored ml-2"></i>
+                    <i class="devicon-php-plain colored"></i>
+                    <i class="devicon-mysql-plain colored"></i>
+                    <i class="devicon-bootstrap-plain colored ml-2"></i>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={3}>
+              <Card
+                style={{
+                  width: "18rem",
+                  marginTop: "20px",
+                  position: "relative",
+                }}
+              >
+                <Card.Img
+                  className="cardimg1 img-fluid"
+                  variant="top"
+                  src={mugprint}
+                />
+                <div className="overlay">
+                  <h3 className="overlay-h">WEBSITE DESIGN</h3>
+                  <p className="overlay-p">Art Website </p>
+
+                  <a
+                    className="overlay-a"
+                    href="https://github.com/ajps208/MugPrint"
+                  >
+                    {" "}
+                    <i class="devicon-github-original text-light  fs-2 "></i>
+                  </a>
+                  <a className="overlay-a" href="https://mug-print.vercel.app">
+                    <i class="fa-solid fa-link  text-light  fs-2 "></i>
+                  </a>
+                </div>{" "}
+                <Card.Body>
+                  <Card.Title>WallArt</Card.Title>
+                  <Card.Text className="fs-2">
+                    <i class="devicon-html5-plain colored"></i>
+
+                    <i class="devicon-css3-plain colored ml-2"></i>
+
+                    <i class="devicon-react-original colored ml-2"></i>
+
+                    <i class="devicon-javascript-plain colored ml-2"></i>
+
+                    <i class="devicon-bootstrap-plain colored ml-2"></i>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={3}>
+              <Card
+                style={{
+                  width: "18rem",
+                  marginTop: "20px",
+                  position: "relative",
+                }}
+              >
+                <Card.Img
+                  className="cardimg1 img-fluid"
+                  variant="top"
+                  src={notesin}
+                />
+                <div className="overlay">
+                  <h3 className="overlay-h">Notes Website</h3>
+                  <p className="overlay-p">Notes Gallery</p>
+
+                  <a
+                    className="overlay-a"
+                    href="https://github.com/ajps208/doc-app"
+                  >
+                    {" "}
+                    <i class="devicon-github-original text-light  fs-2 "></i>
+                  </a>
+                  <a
+                    className="overlay-a"
+                    href="https://notes-in-new.vercel.app/"
+                  >
+                    <i class="fa-solid fa-link  text-light  fs-2 "></i>
+                  </a>
+                </div>{" "}
+                <Card.Body>
+                  <Card.Title>NotesIn</Card.Title>
+                  <Card.Text className="fs-2">
+                    <i class="devicon-html5-plain colored"></i>
+
+                    <i class="devicon-css3-plain colored ml-2"></i>
+
+                    <i class="devicon-react-original colored ml-2"></i>
+
+                    <i class="devicon-javascript-plain colored ml-2"></i>
+
+                    <i class="devicon-bootstrap-plain colored ml-2"></i>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
           <Row>
             <Col lg={3}>
               {" "}
@@ -199,11 +583,17 @@ function Body({isDarkMode}) {
                   <h3 className="overlay-h">WEBSITE DESIGN</h3>
                   <p className="overlay-p">Netflix Clone</p>
 
-                  <a className="overlay-a" href="https://github.com/ajps208/Moviearena">
+                  <a
+                    className="overlay-a"
+                    href="https://github.com/ajps208/Moviearena"
+                  >
                     {" "}
                     <i class="devicon-github-original text-light  fs-2 "></i>
                   </a>
-                  <a href="https://moviearenaa.netlify.app" className="overlay-a">
+                  <a
+                    href="https://moviearenaa.netlify.app"
+                    className="overlay-a"
+                  >
                     <i class="fa-solid fa-link  text-light  fs-2 "></i>
                   </a>
                 </div>
@@ -241,7 +631,10 @@ function Body({isDarkMode}) {
                   <h3 className="overlay-h">WEBSITE DESIGN</h3>
                   <p className="overlay-p">Hostel mangement system</p>
 
-                  <a className="overlay-a" href="https://github.com/ajps208/hms">
+                  <a
+                    className="overlay-a"
+                    href="https://github.com/ajps208/hms"
+                  >
                     {" "}
                     <i class="devicon-github-original text-light  fs-2 "></i>
                   </a>
@@ -278,11 +671,17 @@ function Body({isDarkMode}) {
                   <h3 className="overlay-h">WEBSITE DESIGN</h3>
                   <p className="overlay-p">Anime Details Finder</p>
 
-                  <a className="overlay-a" href="https://github.com/ajps208/Anime-finder">
+                  <a
+                    className="overlay-a"
+                    href="https://github.com/ajps208/Anime-finder"
+                  >
                     {" "}
                     <i class="devicon-github-original text-light  fs-2 "></i>
                   </a>
-                  <a className="overlay-a" href="https://animefinder-ajithps.netlify.app">
+                  <a
+                    className="overlay-a"
+                    href="https://animefinder-ajithps.netlify.app"
+                  >
                     <i class="fa-solid fa-link  text-light  fs-2 "></i>
                   </a>
                 </div>{" "}
@@ -319,11 +718,17 @@ function Body({isDarkMode}) {
                   <h3 className="overlay-h">React Game</h3>
                   <p className="overlay-p">Game using react</p>
 
-                  <a className="overlay-a" href="https://github.com/ajps208/TicTacToe">
+                  <a
+                    className="overlay-a"
+                    href="https://github.com/ajps208/TicTacToe"
+                  >
                     {" "}
                     <i class="devicon-github-original text-light  fs-2 "></i>
                   </a>
-                  <a className="overlay-a" href="https://tictactoe-ajithps.netlify.app">
+                  <a
+                    className="overlay-a"
+                    href="https://tictactoe-ajithps.netlify.app"
+                  >
                     <i class="fa-solid fa-link  text-light  fs-2 "></i>
                   </a>
                 </div>{" "}
@@ -344,7 +749,7 @@ function Body({isDarkMode}) {
               </Card>
             </Col>
           </Row>
-          <Row>
+          {/* <Row>
             <Col lg={3}>
               {" "}
               <Card
@@ -367,7 +772,10 @@ function Body({isDarkMode}) {
                     {" "}
                     <i class="devicon-github-original text-light  fs-2 "></i>
                   </a>
-                  <a className="overlay-a" href="https://zomato-clone-ajithps.netlify.app">
+                  <a
+                    className="overlay-a"
+                    href="https://zomato-clone-ajithps.netlify.app"
+                  >
                     <i class="fa-solid fa-link  text-light  fs-2 "></i>
                   </a>
                 </div>{" "}
@@ -404,12 +812,17 @@ function Body({isDarkMode}) {
                   <h3 className="overlay-h">WEBSITE DESIGN</h3>
                   <p className="overlay-p">Parallax website design</p>
 
-                 
-                  <a className="overlay-a" href="https://github.com/ajps208/Discover-india">
+                  <a
+                    className="overlay-a"
+                    href="https://github.com/ajps208/Discover-india"
+                  >
                     {" "}
                     <i class="devicon-github-original text-light  fs-2 "></i>
                   </a>
-                  <a className="overlay-a" href="https://discover-india.netlify.app">
+                  <a
+                    className="overlay-a"
+                    href="https://discover-india.netlify.app"
+                  >
                     <i class="fa-solid fa-link  text-light  fs-2 "></i>
                   </a>
                 </div>{" "}
@@ -444,11 +857,17 @@ function Body({isDarkMode}) {
                   <h3 className="overlay-h">WEBSITE DESIGN</h3>
                   <p className="overlay-p">Landing page</p>
 
-                  <a className="overlay-a" href="https://github.com/ajps208/Travelguide">
+                  <a
+                    className="overlay-a"
+                    href="https://github.com/ajps208/Travelguide"
+                  >
                     {" "}
                     <i class="devicon-github-original text-light  fs-2 "></i>
                   </a>
-                  <a className="overlay-a" href="https://travelguide-ajith.netlify.app">
+                  <a
+                    className="overlay-a"
+                    href="https://travelguide-ajith.netlify.app"
+                  >
                     <i class="fa-solid fa-link  text-light  fs-2 "></i>
                   </a>
                 </div>{" "}
@@ -481,11 +900,17 @@ function Body({isDarkMode}) {
                   <h3 className="overlay-h">WEBSITE DESIGN</h3>
                   <p className="overlay-p">Weather details</p>
 
-                  <a className="overlay-a" href="https://github.com/ajps208/weatherApp">
+                  <a
+                    className="overlay-a"
+                    href="https://github.com/ajps208/weatherApp"
+                  >
                     {" "}
                     <i class="devicon-github-original text-light  fs-2 "></i>
                   </a>
-                  <a className="overlay-a" href="https://weatherapp-ajithps.netlify.app">
+                  <a
+                    className="overlay-a"
+                    href="https://weatherapp-ajithps.netlify.app"
+                  >
                     <i class="fa-solid fa-link  text-light  fs-2 "></i>
                   </a>
                 </div>{" "}
@@ -503,35 +928,145 @@ function Body({isDarkMode}) {
                 </Card.Body>
               </Card>
             </Col>
-          </Row>
+          </Row> */}
         </div>
       </Container>
-      <Container fluid className="mt-5 " id="contacts">
-      <div className="titlediv w-100 d-flex justify-content-center align-items-center flex-column">
-              <p className="titlepara1 ">Get in Touch</p>
-              <h1 className="titlehead">Contact Me</h1> 
-              <hr />
-              <p className="w-50 spara pt-3">
-             <b> There are several platforms on which i'm available like facebook,linkedin,x,github</b>
+      {/* Contact Section Redesign */}
+      <Container fluid className="contact-section py-5" id="contacts">
+        <Row className="justify-content-center">
+          <Col md={10} lg={8}>
+            <div className="text-center mb-5">
+              <p className="subtitle">Get in Touch</p>
+              <h1 className="section-title">Contact Me</h1>
+              <div className="title-underline mx-auto"></div>
+              <p className="section-description mt-4">
+                Let's connect and discuss how we can work together on your next
+                project
               </p>
             </div>
-            <div className="d-flex align-items-center justify-content-evenly flex-wrap">
-             <div >
-              <h4 ><b>phone no</b></h4>
-              <h5 className="linktext"><i class="fa-solid fa-phone"></i> 8139095765</h5>
-              <h4><b>Email</b></h4>
-              <h5 className="linktext"><i class="fa-regular fa-envelope"></i> ajithps208@gmail.com</h5>
-             </div>
-             <div className="fs-2">
-             <a  className="ca" href="https://github.com/ajps208"><i class="fa-brands fa-github mx-3"></i></a>
-             <a className="ca"  href="https://www.linkedin.com/in/ajith-ps-16a743259/"><i class="fa-brands fa-linkedin mx-3"></i></a>
-             <a className="ca"  href=""><i class="fa-brands fa-instagram mx-3"></i></a>
-             <a className="ca" href=""><i class="fa-brands fa-stack-overflow mx-3"></i></a>
-             </div>
-             <div className="fs-4 d-flex">
-             <i class="fa-solid fa-location-dot"></i>&nbsp; < p className="linktext" >Puthupully House,Thottipal p.o,Thrissur, <br /> &nbsp; &nbsp; Kerala pincode:680310</ p >
-             </div>
+          </Col>
+        </Row>
+
+        <Row className="justify-content-center">
+          <Col md={11} lg={11}>
+            <div className="contact-card">
+              <Row>
+                <Col md={5}>
+                  <div className="contact-info p-4">
+                    <h3 className="mb-4">Let's Talk</h3>
+
+                    <div className="contact-item mb-4">
+                      <div className="contact-icon">
+                        <i className="fa-solid fa-phone"></i>
+                      </div>
+                      <div className="contact-details">
+                        <h5>Phone</h5>
+                        <p>8139095765</p>
+                      </div>
+                    </div>
+
+                    <div className="contact-item mb-4">
+                      <div className="contact-icon">
+                        <i className="fa-regular fa-envelope"></i>
+                      </div>
+                      <div className="contact-details">
+                        <h5>Email</h5>
+                        <p>ajithps208@gmail.com</p>
+                      </div>
+                    </div>
+
+                    <div className="contact-item mb-4">
+                      <div className="contact-icon">
+                        <i className="fa-solid fa-location-dot"></i>
+                      </div>
+                      <div className="contact-details">
+                        <h5>Location</h5>
+                        <p>
+                          Puthupully House, Thottipal p.o, Thrissur, Kerala
+                          680310
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="social-links mt-5">
+                      <a
+                        href="https://github.com/ajps208"
+                        className="social-icon"
+                        aria-label="GitHub"
+                      >
+                        <i className="fa-brands fa-github"></i>
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/ajith-ps-16a743259/"
+                        className="social-icon"
+                        aria-label="LinkedIn"
+                      >
+                        <i className="fa-brands fa-linkedin"></i>
+                      </a>
+                      <a
+                        href="#"
+                        className="social-icon"
+                        aria-label="Instagram"
+                      >
+                        <i className="fa-brands fa-instagram"></i>
+                      </a>
+                      <a
+                        href="#"
+                        className="social-icon"
+                        aria-label="Stack Overflow"
+                      >
+                        <i className="fa-brands fa-stack-overflow"></i>
+                      </a>
+                    </div>
+                  </div>
+                </Col>
+
+                <Col md={7}>
+                  <div className="contact-form p-4">
+                    <h3 className="mb-4">Send Me a Message</h3>
+                    <form>
+                      <div className="mb-3">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Your Name"
+                          required
+                        />
+                      </div>
+                      <div className="mb-3">
+                        <input
+                          type="email"
+                          className="form-control"
+                          placeholder="Your Email"
+                          required
+                        />
+                      </div>
+                      <div className="mb-3">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Subject"
+                        />
+                      </div>
+                      <div className="mb-3">
+                        <textarea
+                          className="form-control"
+                          rows="5"
+                          placeholder="Your Message"
+                          required
+                        ></textarea>
+                      </div>
+                      <button type="submit" className="send-message-btn">
+                        Send Message{" "}
+                        <i className="fa-solid fa-paper-plane ms-2"></i>
+                      </button>
+                    </form>
+                  </div>
+                </Col>
+              </Row>
             </div>
+          </Col>
+        </Row>
       </Container>
     </>
   );
